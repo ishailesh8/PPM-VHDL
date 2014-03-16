@@ -1,0 +1,8 @@
+In this project i have implemented different intensity modulation schemes which are used in optical communication. 
+VHDL code for modulator as well as demodulator block has been written for OOK, PPM, DPPM and DPIM.
+These modules are generic where length of PPM, DPPM, DPIM blocks and clock frequency can be configured as desired.
+I have tested the design in Xilinx Virtex 2 Pro Board. 
+Simulation was done in ModelSim and graphs for different blocks can be found in ~/modem/snapshot folder.
+VHDL Codes for different blocks are in ~/modem/sources folder
+Explanation of different block diagram will be available on request basis. 
+You can contact me at : ishailesh8@gmail.com.
