@@ -1,0 +1,7 @@
+vhdl work "E:\IIT\modem\source\ser2par.vhd"
+vhdl work "E:\IIT\modem\source\prbs.vhd"
+vhdl work "E:\IIT\modem\source\mppm.vhd"
+vhdl work "E:\IIT\modem\source\mdppm.vhd"
+vhdl work "E:\IIT\modem\source\clockmodule.vhd"
+vhdl work "E:\IIT\modem\source\buffmodule.vhd"
+vhdl work "E:\IIT\modem\source\topmod.vhd"

@@ -1,0 +1,15 @@
+IncrementalMessagingEnabled
+true
+s
+MessageCaptureEnabled
+true
+s
+MessageFilterFile
+filter.filter
+s
+MessageFilteringEnabled
+true
+s
+RunOnce
+#/PnAutoRun/Scripts/RunOnce_tcl
+s

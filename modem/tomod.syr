@@ -1,0 +1,201 @@
+Release 10.1.03 - xst K.39 (nt)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to E:/IIT/modem/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Parameter xsthdpdir set to E:/IIT/modem/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Reading design: tomod.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) Partition Resource Summary
+     9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "tomod.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "tomod"
+Output Format                      : NGC
+Target Device                      : xc2vp30-7-ff896
+
+---- Source Options
+Top Module Name                    : tomod
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Convert Tristates To Logic         : Yes
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Library Search Order               : tomod.lso
+Keep Hierarchy                     : NO
+Netlist Hierarchy                  : as_optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "E:/IIT/modem/source/prbs.vhd" in Library work.
+Entity <prbs> compiled.
+Entity <prbs> (Architecture <behavioral>) compiled.
+Compiling vhdl file "E:/IIT/modem/source/clockmodule.vhd" in Library work.
+Entity <clockmodule> compiled.
+Entity <clockmodule> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "E:/IIT/modem/source/ser2par.vhd" in Library work.
+Entity <ser2par> compiled.
+Entity <ser2par> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "E:/IIT/modem/source/mppm.vhd" in Library work.
+Entity <mppm> compiled.
+Entity <mppm> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "E:/IIT/modem/source/buffmodule.vhd" in Library work.
+Entity <buffmodule> compiled.
+Entity <buffmodule> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "E:/IIT/modem/source/mdppm.vhd" in Library work.
+Entity <mdppm> compiled.
+Entity <mdppm> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "E:/IIT/modem/source/topmod.vhd" in Library work.
+Entity <topmod> compiled.
+ERROR:HDLParsers:3010 - "E:/IIT/modem/source/topmod.vhd" Line 43. Entity tomod does not exist.
+ERROR:HDLParsers:3312 - "E:/IIT/modem/source/topmod.vhd" Line 49. Undefined symbol 'std_logic'.
+ERROR:HDLParsers:1209 - "E:/IIT/modem/source/topmod.vhd" Line 49. std_logic: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "E:/IIT/modem/source/topmod.vhd" Line 63. Undefined symbol 'std_logic'.
+ERROR:HDLParsers:1209 - "E:/IIT/modem/source/topmod.vhd" Line 63. std_logic: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "E:/IIT/modem/source/topmod.vhd" Line 76. Undefined symbol 'std_logic'.
+ERROR:HDLParsers:1209 - "E:/IIT/modem/source/topmod.vhd" Line 76. std_logic: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "E:/IIT/modem/source/topmod.vhd" Line 81. Undefined symbol 'std_logic_vector'.
+ERROR:HDLParsers:1209 - "E:/IIT/modem/source/topmod.vhd" Line 81. std_logic_vector: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "E:/IIT/modem/source/topmod.vhd" Line 86. Undefined symbol 'std_logic'.
+ERROR:HDLParsers:1209 - "E:/IIT/modem/source/topmod.vhd" Line 86. std_logic: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "E:/IIT/modem/source/topmod.vhd" Line 89. Undefined symbol 'std_logic_vector'.
+ERROR:HDLParsers:1209 - "E:/IIT/modem/source/topmod.vhd" Line 89. std_logic_vector: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "E:/IIT/modem/source/topmod.vhd" Line 96. Undefined symbol 'std_logic'.
+ERROR:HDLParsers:1209 - "E:/IIT/modem/source/topmod.vhd" Line 96. std_logic: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "E:/IIT/modem/source/topmod.vhd" Line 97. Undefined symbol 'std_logic_vector'.
+ERROR:HDLParsers:1209 - "E:/IIT/modem/source/topmod.vhd" Line 97. std_logic_vector: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "E:/IIT/modem/source/topmod.vhd" Line 107. Undefined symbol 'std_logic'.
+ERROR:HDLParsers:1209 - "E:/IIT/modem/source/topmod.vhd" Line 107. std_logic: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "E:/IIT/modem/source/topmod.vhd" Line 110. Undefined symbol 'std_logic_vector'.
+ERROR:HDLParsers:1209 - "E:/IIT/modem/source/topmod.vhd" Line 110. std_logic_vector: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "E:/IIT/modem/source/topmod.vhd" Line 115. Undefined symbol 'std_logic'.
+ERROR:HDLParsers:1209 - "E:/IIT/modem/source/topmod.vhd" Line 115. std_logic: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "E:/IIT/modem/source/topmod.vhd" Line 119. Undefined symbol 'std_logic_vector'.
+ERROR:HDLParsers:1209 - "E:/IIT/modem/source/topmod.vhd" Line 119. std_logic_vector: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "E:/IIT/modem/source/topmod.vhd" Line 119. Undefined symbol 'Ntop'.
+ERROR:HDLParsers:1209 - "E:/IIT/modem/source/topmod.vhd" Line 119. Ntop: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "E:/IIT/modem/source/topmod.vhd" Line 136. Undefined symbol 'tempNsysclk'.
+ERROR:HDLParsers:1209 - "E:/IIT/modem/source/topmod.vhd" Line 136. tempNsysclk: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "E:/IIT/modem/source/topmod.vhd" Line 137. Undefined symbol 'reset'.
+ERROR:HDLParsers:1209 - "E:/IIT/modem/source/topmod.vhd" Line 137. reset: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "E:/IIT/modem/source/topmod.vhd" Line 139. Undefined symbol 'dataser'.
+ERROR:HDLParsers:1209 - "E:/IIT/modem/source/topmod.vhd" Line 139. dataser: Undefined symbol (last report in this block)
+ERROR:HDLParsers:851 - "E:/IIT/modem/source/topmod.vhd" Line 132. Formal N of prbs with no default value must be associated with an actual value.
+ERROR:HDLParsers:3313 - "E:/IIT/modem/source/topmod.vhd" Line 152. Undefined symbol 'clock'.  Should it be: block?
+ERROR:HDLParsers:1209 - "E:/IIT/modem/source/topmod.vhd" Line 152. clock: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "E:/IIT/modem/source/topmod.vhd" Line 155. Undefined symbol 'icmdppm'.
+ERROR:HDLParsers:1209 - "E:/IIT/modem/source/topmod.vhd" Line 155. icmdppm: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "E:/IIT/modem/source/topmod.vhd" Line 156. Undefined symbol 'icmppm'.
+ERROR:HDLParsers:1209 - "E:/IIT/modem/source/topmod.vhd" Line 156. icmppm: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "E:/IIT/modem/source/topmod.vhd" Line 157. Undefined symbol 'icser2parmdppm'.
+ERROR:HDLParsers:1209 - "E:/IIT/modem/source/topmod.vhd" Line 157. icser2parmdppm: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "E:/IIT/modem/source/topmod.vhd" Line 159. Undefined symbol 'icser2parmppm'.
+ERROR:HDLParsers:1209 - "E:/IIT/modem/source/topmod.vhd" Line 159. icser2parmppm: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "E:/IIT/modem/source/topmod.vhd" Line 169. Undefined symbol 'mppmser2parflagtemp'.
+ERROR:HDLParsers:1209 - "E:/IIT/modem/source/topmod.vhd" Line 169. mppmser2parflagtemp: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "E:/IIT/modem/source/topmod.vhd" Line 171. Undefined symbol 'dataparmppm'.
+ERROR:HDLParsers:1209 - "E:/IIT/modem/source/topmod.vhd" Line 171. dataparmppm: Undefined symbol (last report in this block)
+ERROR:HDLParsers:851 - "E:/IIT/modem/source/topmod.vhd" Line 161. Formal N of ser2par with no default value must be associated with an actual value.
+ERROR:HDLParsers:3312 - "E:/IIT/modem/source/topmod.vhd" Line 182. Undefined symbol 'ppmout'.
+ERROR:HDLParsers:1209 - "E:/IIT/modem/source/topmod.vhd" Line 182. ppmout: Undefined symbol (last report in this block)
+ERROR:HDLParsers:851 - "E:/IIT/modem/source/topmod.vhd" Line 173. Formal N of mppm with no default value must be associated with an actual value.
+ERROR:HDLParsers:3312 - "E:/IIT/modem/source/topmod.vhd" Line 192. Undefined symbol 'mdppmser2parflagtemp'.
+ERROR:HDLParsers:1209 - "E:/IIT/modem/source/topmod.vhd" Line 192. mdppmser2parflagtemp: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "E:/IIT/modem/source/topmod.vhd" Line 194. Undefined symbol 'dataparinbuffmdppm'.
+ERROR:HDLParsers:1209 - "E:/IIT/modem/source/topmod.vhd" Line 194. dataparinbuffmdppm: Undefined symbol (last report in this block)
+ERROR:HDLParsers:851 - "E:/IIT/modem/source/topmod.vhd" Line 184. Formal N of ser2par with no default value must be associated with an actual value.
+ERROR:HDLParsers:3312 - "E:/IIT/modem/source/topmod.vhd" Line 204. Undefined symbol 'mdppmtempout'.
+ERROR:HDLParsers:1209 - "E:/IIT/modem/source/topmod.vhd" Line 204. mdppmtempout: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "E:/IIT/modem/source/topmod.vhd" Line 206. Undefined symbol 'dataparoutbuffmdppm'.
+ERROR:HDLParsers:1209 - "E:/IIT/modem/source/topmod.vhd" Line 206. dataparoutbuffmdppm: Undefined symbol (last report in this block)
+ERROR:HDLParsers:851 - "E:/IIT/modem/source/topmod.vhd" Line 196. Formal N of buffmodule with no default value must be associated with an actual value.
+ERROR:HDLParsers:851 - "E:/IIT/modem/source/topmod.vhd" Line 208. Formal N of mdppm with no default value must be associated with an actual value.
+ERROR:HDLParsers:3312 - "E:/IIT/modem/source/topmod.vhd" Line 219. Undefined symbol 'dppmout'.
+ERROR:HDLParsers:3312 - "E:/IIT/modem/source/topmod.vhd" Line 220. Undefined symbol 'ookout'.
+--> 
+
+Total memory usage is 178488 kilobytes
+
+Number of errors   :   65 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

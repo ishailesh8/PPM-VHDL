@@ -1,0 +1,1 @@
+xst -ise "E:/IIT/modem/modem.ise" -intstyle ise -ifn "E:/IIT/modem/buffmodule.xst" -ofn "E:/IIT/modem/buffmodule.syr"

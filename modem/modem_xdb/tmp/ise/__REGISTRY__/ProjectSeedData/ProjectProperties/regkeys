@@ -1,0 +1,33 @@
+PROP_DevDevice
+xc2vp30
+s
+PROP_DevFamily
+Virtex2P
+s
+PROP_DevPackage
+ff896
+s
+PROP_DevSpeed
+-7
+s
+PROP_Enable_Incremental_Messaging
+true
+s
+PROP_Enable_Message_Capture
+true
+s
+PROP_Enable_Message_Filtering
+true
+s
+PROP_PreferredLanguage
+VHDL
+s
+PROP_Simulator
+Modelsim-PE VHDL
+s
+PROP_Synthesis_Tool
+XST (VHDL/Verilog)
+s
+PROP_Top_Level_Module_Type
+HDL
+s

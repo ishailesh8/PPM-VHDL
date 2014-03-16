@@ -1,0 +1,26 @@
+Release 10.1.03 - netgen K.39 (nt)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+
+Command Line: netgen -intstyle ise -ar Structure -tm topmod -w -dir
+netgen/synthesis -ofmt vhdl -sim topmod.ngc topmod_synthesis.vhd  
+
+Reading design 'topmod.ngc' ...
+Flattening design ...
+Processing design ... 
+  Preping design's networks ...
+  Preping design's macros ...
+Writing VHDL netlist 'E:\IIT\modem\netgen\synthesis\topmod_synthesis.vhd' ...
+INFO:NetListWriters:635 - The generated VHDL netlist contains Xilinx UNISIM
+   simulation primitives and has to be used with UNISIM library for correct
+   compilation and simulation. 
+INFO:NetListWriters - Setup Simulation - To perform a setup simulation, specify
+   values in the Maximum (MAX) field with the following command line modifier: 
+   -SDFMAX
+INFO:NetListWriters - Hold Simulation - To perform the most accurate hold
+   simulation, specify values in the Minimum (MIN) field with the following
+   command line modifier:  -SDFMIN
+INFO:NetListWriters:665 - For more information on how to pass the SDF switches
+   to the simulator, see your Simulator tool documentation.
+Number of warnings: 0
+Number of info messages: 4
+Total memory usage is 115124 kilobytes

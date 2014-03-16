@@ -1,0 +1,1499 @@
+Release 10.1.03 - xst K.39 (nt)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to E:/IIT/modem/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.66 secs
+ 
+--> Parameter xsthdpdir set to E:/IIT/modem/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.66 secs
+ 
+--> Reading design: topmod.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) Partition Resource Summary
+     9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "topmod.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "topmod"
+Output Format                      : NGC
+Target Device                      : xc2vp30-7-ff896
+
+---- Source Options
+Top Module Name                    : topmod
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Convert Tristates To Logic         : Yes
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Library Search Order               : topmod.lso
+Keep Hierarchy                     : NO
+Netlist Hierarchy                  : as_optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "E:/IIT/modem/source/prbs.vhd" in Library work.
+Architecture behavioral of Entity prbs is up to date.
+Compiling vhdl file "E:/IIT/modem/source/clockmodule.vhd" in Library work.
+Entity <clockmodule> compiled.
+Entity <clockmodule> (Architecture <behavioral>) compiled.
+Compiling vhdl file "E:/IIT/modem/source/ser2par.vhd" in Library work.
+Architecture behavioral of Entity ser2par is up to date.
+Compiling vhdl file "E:/IIT/modem/source/mppm.vhd" in Library work.
+Architecture behavioral of Entity mppm is up to date.
+Compiling vhdl file "E:/IIT/modem/source/buffmodule.vhd" in Library work.
+Architecture behavioral of Entity buffmodule is up to date.
+Compiling vhdl file "E:/IIT/modem/source/mdppm.vhd" in Library work.
+Architecture behavioral of Entity mdppm is up to date.
+Compiling vhdl file "E:/IIT/modem/source/mdpim.vhd" in Library work.
+Architecture behavioral of Entity mdpim is up to date.
+Compiling vhdl file "E:/IIT/modem/source/clockrecovery.vhd" in Library work.
+Entity <clockrecovery> compiled.
+Entity <clockrecovery> (Architecture <behavioral>) compiled.
+Compiling vhdl file "E:/IIT/modem/source/ookdemod.vhd" in Library work.
+Architecture behavioral of Entity ookdemod is up to date.
+Compiling vhdl file "E:/IIT/modem/source/ppmdemod.vhd" in Library work.
+Architecture behavioral of Entity ppmdemod is up to date.
+Compiling vhdl file "E:/IIT/modem/source/par2ser.vhd" in Library work.
+Architecture behavioral of Entity par2ser is up to date.
+Compiling vhdl file "E:/IIT/modem/source/dppmdemod.vhd" in Library work.
+Architecture behavioral of Entity dppmdemod is up to date.
+Compiling vhdl file "E:/IIT/modem/source/dpimdemod.vhd" in Library work.
+Architecture behavioral of Entity dpimdemod is up to date.
+Compiling vhdl file "E:/IIT/modem/source/topmod.vhd" in Library work.
+Entity <topmod> compiled.
+Entity <topmod> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <topmod> in library <work> (architecture <behavioral>) with generics.
+	Ntop = 3
+	div = 1
+
+Analyzing hierarchy for entity <prbs> in library <work> (architecture <behavioral>) with generics.
+	N = 3
+
+Analyzing hierarchy for entity <clockmodule> in library <work> (architecture <behavioral>) with generics.
+	mdpimNclk = 6
+	mdppmNclk = 6
+	mppmNclk = 3
+	samplingNclk = 1
+	ser2parmdpimNclk = 24
+	ser2parmdppmNclk = 24
+	ser2parmppmNclk = 24
+	sysNclk = 8
+
+Analyzing hierarchy for entity <ser2par> in library <work> (architecture <behavioral>) with generics.
+	N = 3
+
+Analyzing hierarchy for entity <mppm> in library <work> (architecture <behavioral>) with generics.
+	N = 3
+
+Analyzing hierarchy for entity <buffmodule> in library <work> (architecture <behavioral>) with generics.
+	N = 3
+
+Analyzing hierarchy for entity <mdppm> in library <work> (architecture <behavioral>) with generics.
+	N = 3
+
+Analyzing hierarchy for entity <mdpim> in library <work> (architecture <behavioral>) with generics.
+	N = 3
+
+Analyzing hierarchy for entity <clockrecovery> in library <work> (architecture <behavioral>) with generics.
+	maxlength = 6
+
+Analyzing hierarchy for entity <ookdemod> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <ppmdemod> in library <work> (architecture <behavioral>) with generics.
+	N = 3
+
+Analyzing hierarchy for entity <par2ser> in library <work> (architecture <behavioral>) with generics.
+	N = 3
+
+Analyzing hierarchy for entity <dppmdemod> in library <work> (architecture <behavioral>) with generics.
+	N = 3
+
+Analyzing hierarchy for entity <dpimdemod> in library <work> (architecture <behavioral>) with generics.
+	N = 3
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing generic Entity <topmod> in library <work> (Architecture <behavioral>).
+	Ntop = 3
+	div = 1
+WARNING:Xst:753 - "E:/IIT/modem/source/topmod.vhd" line 555: Unconnected output port 'par2serflagout' of component 'par2ser'.
+Entity <topmod> analyzed. Unit <topmod> generated.
+
+Analyzing generic Entity <prbs> in library <work> (Architecture <behavioral>).
+	N = 3
+INFO:Xst:2679 - Register <prbsstatus> in unit <prbs> has a constant value of 1 during circuit operation. The register is replaced by logic.
+Entity <prbs> analyzed. Unit <prbs> generated.
+
+Analyzing generic Entity <clockmodule> in library <work> (Architecture <behavioral>).
+	mdpimNclk = 6
+	mdppmNclk = 6
+	mppmNclk = 3
+	samplingNclk = 1
+	ser2parmdpimNclk = 24
+	ser2parmdppmNclk = 24
+	ser2parmppmNclk = 24
+	sysNclk = 8
+Entity <clockmodule> analyzed. Unit <clockmodule> generated.
+
+Analyzing generic Entity <ser2par> in library <work> (Architecture <behavioral>).
+	N = 3
+INFO:Xst:2679 - Register <ser2parflag> in unit <ser2par> has a constant value of 1 during circuit operation. The register is replaced by logic.
+Entity <ser2par> analyzed. Unit <ser2par> generated.
+
+Analyzing generic Entity <mppm> in library <work> (Architecture <behavioral>).
+	N = 3
+Entity <mppm> analyzed. Unit <mppm> generated.
+
+Analyzing generic Entity <buffmodule> in library <work> (Architecture <behavioral>).
+	N = 3
+INFO:Xst:2679 - Register <buffstatusout> in unit <buffmodule> has a constant value of 1 during circuit operation. The register is replaced by logic.
+Entity <buffmodule> analyzed. Unit <buffmodule> generated.
+
+Analyzing generic Entity <mdppm> in library <work> (Architecture <behavioral>).
+	N = 3
+Entity <mdppm> analyzed. Unit <mdppm> generated.
+
+Analyzing generic Entity <mdpim> in library <work> (Architecture <behavioral>).
+	N = 3
+Entity <mdpim> analyzed. Unit <mdpim> generated.
+
+Analyzing generic Entity <clockrecovery> in library <work> (Architecture <behavioral>).
+	maxlength = 6
+WARNING:Xst:819 - "E:/IIT/modem/source/clockrecovery.vhd" line 188: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <ppmNclk>, <firsttriggerppm>, <ppmtempclkopR>, <ppmtempclkopF>, <ppmtempclkop>
+INFO:Xst:2679 - Register <triggerdppm> in unit <clockrecovery> has a constant value of 1 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <triggerdpim> in unit <clockrecovery> has a constant value of 1 during circuit operation. The register is replaced by logic.
+Entity <clockrecovery> analyzed. Unit <clockrecovery> generated.
+
+Analyzing Entity <ookdemod> in library <work> (Architecture <behavioral>).
+Entity <ookdemod> analyzed. Unit <ookdemod> generated.
+
+Analyzing generic Entity <ppmdemod> in library <work> (Architecture <behavioral>).
+	N = 3
+INFO:Xst:2679 - Register <ppmdemodflag> in unit <ppmdemod> has a constant value of 1 during circuit operation. The register is replaced by logic.
+Entity <ppmdemod> analyzed. Unit <ppmdemod> generated.
+
+Analyzing generic Entity <par2ser> in library <work> (Architecture <behavioral>).
+	N = 3
+WARNING:Xst:819 - "E:/IIT/modem/source/par2ser.vhd" line 53: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <par2serflagin>, <par2sermodclock>
+Entity <par2ser> analyzed. Unit <par2ser> generated.
+
+Analyzing generic Entity <dppmdemod> in library <work> (Architecture <behavioral>).
+	N = 3
+Entity <dppmdemod> analyzed. Unit <dppmdemod> generated.
+
+Analyzing generic Entity <dpimdemod> in library <work> (Architecture <behavioral>).
+	N = 3
+Entity <dpimdemod> analyzed. Unit <dpimdemod> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <prbs>.
+    Related source file is "E:/IIT/modem/source/prbs.vhd".
+    Found 1-bit register for signal <prbsout>.
+    Found 3-bit register for signal <lfsr>.
+    Found 1-bit xor2 for signal <lfsr$xor0000> created at line 26.
+    Found 2-bit up counter for signal <synccounter>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <prbs> synthesized.
+
+
+Synthesizing Unit <clockmodule>.
+    Related source file is "E:/IIT/modem/source/clockmodule.vhd".
+WARNING:Xst:1780 - Signal <samplingtempclkop> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit register for signal <cmodser2parmdppmclock>.
+    Found 1-bit register for signal <cmodmdppmclock>.
+    Found 1-bit register for signal <cmodser2parmppmclock>.
+    Found 1-bit register for signal <cmodser2parmdpimclock>.
+    Found 1-bit register for signal <cmodsysNclock>.
+    Found 1-bit register for signal <cmodmdpimclock>.
+    Found 3-bit comparator greater for signal <cmodmppmclock$cmp_gt0000> created at line 143.
+    Found 3-bit register for signal <mdpimclockcounter>.
+    Found 3-bit adder for signal <mdpimclockcounter$addsub0000> created at line 197.
+    Found 1-bit register for signal <mdpimtempclkop>.
+    Found 3-bit register for signal <mdppmclockcounter>.
+    Found 3-bit adder for signal <mdppmclockcounter$addsub0000> created at line 172.
+    Found 1-bit register for signal <mdppmtempclkop>.
+    Found 3-bit up counter for signal <mppmtempclkopF>.
+    Found 3-bit up counter for signal <mppmtempclkopR>.
+    Found 5-bit register for signal <ser2parmdpimclockcounter>.
+    Found 5-bit adder for signal <ser2parmdpimclockcounter$addsub0000> created at line 271.
+    Found 1-bit register for signal <ser2parmdpimtempclkop>.
+    Found 5-bit register for signal <ser2parmdppmclockcounter>.
+    Found 5-bit adder for signal <ser2parmdppmclockcounter$addsub0000> created at line 246.
+    Found 1-bit register for signal <ser2parmdppmtempclkop>.
+    Found 5-bit register for signal <ser2parmppmclockcounter>.
+    Found 5-bit adder for signal <ser2parmppmclockcounter$addsub0000> created at line 222.
+    Found 1-bit register for signal <ser2parmppmtempclkop>.
+    Found 4-bit register for signal <sysNclockcounter>.
+    Found 4-bit adder for signal <sysNclockcounter$addsub0000> created at line 78.
+    Found 1-bit register for signal <sysNtempclkop>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred  12 D-type flip-flop(s).
+	inferred   6 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <clockmodule> synthesized.
+
+
+Synthesizing Unit <ser2par>.
+    Related source file is "E:/IIT/modem/source/ser2par.vhd".
+    Found 3-bit register for signal <ser2parout>.
+    Found 2-bit up counter for signal <counter>.
+    Found 3-bit register for signal <parallelout>.
+    Found 3-bit register for signal <tempparallelout>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   9 D-type flip-flop(s).
+Unit <ser2par> synthesized.
+
+
+Synthesizing Unit <mppm>.
+    Related source file is "E:/IIT/modem/source/mppm.vhd".
+    Found 3-bit up counter for signal <mppminternalcount>.
+    Found 1-bit register for signal <mppmtempoutR>.
+    Found 3-bit comparator equal for signal <mppmtempoutR$cmp_eq0000> created at line 43.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <mppm> synthesized.
+
+
+Synthesizing Unit <buffmodule>.
+    Related source file is "E:/IIT/modem/source/buffmodule.vhd".
+    Found 3-bit register for signal <dataread>.
+    Found 3-bit 8-to-1 multiplexer for signal <$varindex0000> created at line 62.
+    Found 3-bit up counter for signal <addressR>.
+    Found 3-bit register for signal <addressW>.
+    Found 3-bit adder for signal <addressW$addsub0000> created at line 52.
+    Found 24-bit register for signal <buff>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  30 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   3 Multiplexer(s).
+Unit <buffmodule> synthesized.
+
+
+Synthesizing Unit <mdppm>.
+    Related source file is "E:/IIT/modem/source/mdppm.vhd".
+    Found 3-bit up counter for signal <mdppminternalcount>.
+    Found 3-bit comparator equal for signal <mdppminternalcount$cmp_eq0000> created at line 41.
+    Found 1-bit register for signal <mdppmtempoutR>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <mdppm> synthesized.
+
+
+Synthesizing Unit <mdpim>.
+    Related source file is "E:/IIT/modem/source/mdpim.vhd".
+    Found 3-bit up counter for signal <mdpiminternalcount>.
+    Found 1-bit register for signal <mdpimtempoutR>.
+    Found 1-bit register for signal <mdpimtrigR>.
+    Found 3-bit comparator equal for signal <mdpimtrigR$cmp_eq0000> created at line 44.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   2 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <mdpim> synthesized.
+
+
+Synthesizing Unit <clockrecovery>.
+    Related source file is "E:/IIT/modem/source/clockrecovery.vhd".
+    Register <par2serdppmclockout> equivalent to <par2serdpimclockout> has been removed
+    Register <par2serppmclockout> equivalent to <par2serdpimclockout> has been removed
+WARNING:Xst:737 - Found 3-bit latch for signal <ppmsynccounter>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 7x7-bit ROM for signal <$mux0001>.
+    Found 7x7-bit ROM for signal <$mux0003>.
+    Found 1-bit register for signal <dppmclockout>.
+    Found 1-bit register for signal <triggerook>.
+    Found 1-bit register for signal <desysclockout>.
+    Found 1-bit register for signal <dpimclockout>.
+    Found 1-bit register for signal <ookclockout>.
+    Found 1-bit register for signal <par2serdpimclockout>.
+    Found 3-bit adder for signal <$add0000> created at line 194.
+    Found 3-bit subtractor for signal <$sub0000> created at line 161.
+    Found 3-bit subtractor for signal <$sub0001> created at line 193.
+    Found 7-bit up counter for signal <desysclockcounter>.
+    Found 7-bit comparator equal for signal <desysclockcounter$cmp_eq0000> created at line 414.
+    Found 1-bit register for signal <desystempclkop>.
+    Found 7-bit comparator equal for signal <desystempclkop$cmp_eq0000> created at line 414.
+    Found 7-bit comparator equal for signal <desystempclkop$cmp_eq0001> created at line 416.
+    Found 7-bit comparator not equal for signal <desystempclkop$cmp_ne0000> created at line 416.
+    Found 7-bit comparator not equal for signal <desystempclkop$cmp_ne0001> created at line 414.
+    Found 7-bit up counter for signal <dpimclockcounter>.
+    Found 7-bit comparator equal for signal <dpimclockcounter$cmp_eq0000> created at line 361.
+    Found 3-bit up accumulator for signal <dpimNclk>.
+    Found 1-bit register for signal <dpimtempclkop>.
+    Found 3-bit comparator equal for signal <dpimtempclkop$cmp_eq0000> created at line 359.
+    Found 7-bit comparator equal for signal <dpimtempclkop$cmp_eq0001> created at line 361.
+    Found 7-bit comparator not equal for signal <dpimtempclkop$cmp_ne0000> created at line 361.
+    Found 3-bit comparator not equal for signal <dpimtempclkop$cmp_ne0001> created at line 359.
+    Found 3-bit up counter for signal <dppmclockcounter>.
+    Found 3-bit up accumulator for signal <dppmNclk>.
+    Found 1-bit register for signal <dppmtempclkop>.
+    Found 3-bit comparator equal for signal <dppmtempclkop$cmp_eq0000> created at line 279.
+    Found 3-bit comparator equal for signal <dppmtempclkop$cmp_eq0001> created at line 281.
+    Found 3-bit comparator not equal for signal <dppmtempclkop$cmp_ne0000> created at line 281.
+    Found 3-bit comparator not equal for signal <dppmtempclkop$cmp_ne0001> created at line 279.
+    Found 1-bit register for signal <firsttriggerdpim>.
+    Found 1-bit register for signal <firsttriggerdppm>.
+    Found 1-bit register for signal <firsttriggerook>.
+    Found 1-bit register for signal <firsttriggerppm>.
+    Found 4-bit subtractor for signal <mux0000$addsub0000> created at line 224.
+    Found 4-bit subtractor for signal <mux0002$addsub0000> created at line 414.
+    Found 7-bit up counter for signal <ookclockcounter>.
+    Found 9-bit up counter for signal <ookNclk>.
+    Found 7-bit register for signal <ookNclkleast>.
+    Found 9-bit comparator greatequal for signal <ookNclkleast$cmp_ge0000> created at line 449.
+    Found 1-bit register for signal <ooktempclkop>.
+    Found 7-bit comparator equal for signal <ooktempclkop$cmp_eq0000> created at line 479.
+    Found 7-bit comparator equal for signal <ooktempclkop$cmp_eq0001> created at line 481.
+    Found 7-bit comparator not equal for signal <ooktempclkop$cmp_ne0000> created at line 481.
+    Found 7-bit comparator not equal for signal <ooktempclkop$cmp_ne0001> created at line 479.
+    Found 9-bit up counter for signal <par2serppmclockcounter>.
+    Found 10-bit comparator equal for signal <par2serppmclockcounter$cmp_eq0000> created at line 226.
+    Found 1-bit register for signal <par2serppmtempclkop>.
+    Found 9-bit comparator equal for signal <par2serppmtempclkop$cmp_eq0000> created at line 224.
+    Found 10-bit comparator equal for signal <par2serppmtempclkop$cmp_eq0001> created at line 226.
+    Found 10-bit comparator not equal for signal <par2serppmtempclkop$cmp_ne0000> created at line 226.
+    Found 9-bit comparator not equal for signal <par2serppmtempclkop$cmp_ne0001> created at line 224.
+    Found 6x3-bit multiplier for signal <par2serppmtempclkop$mult0000> created at line 224.
+    Found 7x3-bit multiplier for signal <par2serppmtempclkop$mult0001> created at line 226.
+    Found 3-bit up counter for signal <ppmclockcounter>.
+    Found 3-bit comparator equal for signal <ppmclockcounter$cmp_eq0000> created at line 151.
+    Found 3-bit comparator equal for signal <ppmclockcounter$cmp_eq0001> created at line 153.
+    Found 3-bit comparator equal for signal <ppmclockout$cmp_eq0000> created at line 194.
+    Found 6-bit comparator greater for signal <ppmclockout$cmp_gt0000> created at line 193.
+    Found 6-bit comparator not equal for signal <ppmclockout$cmp_ne0000> created at line 193.
+    Found 3-bit adder for signal <ppmNclk>.
+    Found 3-bit up counter for signal <ppmNclkF>.
+    Found 3-bit up counter for signal <ppmNclkR>.
+    Found 3-bit adder for signal <ppmsynccounter$addsub0000> created at line 197.
+    Found 1-bit register for signal <ppmtempclkop>.
+    Found 3-bit comparator not equal for signal <ppmtempclkop$cmp_ne0000> created at line 153.
+    Found 3-bit comparator not equal for signal <ppmtempclkop$cmp_ne0001> created at line 151.
+    Found 6-bit up counter for signal <ppmtempclkopF>.
+    Found 6-bit comparator equal for signal <ppmtempclkopF$cmp_eq0000> created at line 177.
+    Found 6-bit up counter for signal <ppmtempclkopR>.
+    Found 6-bit comparator equal for signal <ppmtempclkopR$cmp_eq0000> created at line 161.
+    Found 9-bit up counter for signal <sampledatacount>.
+    Summary:
+	inferred   2 ROM(s).
+	inferred  12 Counter(s).
+	inferred   2 Accumulator(s).
+	inferred  23 D-type flip-flop(s).
+	inferred   7 Adder/Subtractor(s).
+	inferred   2 Multiplier(s).
+	inferred  33 Comparator(s).
+Unit <clockrecovery> synthesized.
+
+
+Synthesizing Unit <ookdemod>.
+    Related source file is "E:/IIT/modem/source/ookdemod.vhd".
+    Found 1-bit register for signal <ookdemodout>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <ookdemod> synthesized.
+
+
+Synthesizing Unit <ppmdemod>.
+    Related source file is "E:/IIT/modem/source/ppmdemod.vhd".
+    Found 3-bit register for signal <parppmdemodout>.
+    Found 3-bit up counter for signal <mppmdataintvalue>.
+    Found 3-bit register for signal <parppmdemodtempout>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   6 D-type flip-flop(s).
+Unit <ppmdemod> synthesized.
+
+
+Synthesizing Unit <par2ser>.
+    Related source file is "E:/IIT/modem/source/par2ser.vhd".
+WARNING:Xst:647 - Input <par2serreset> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 2-bit register for signal <loadvalue>.
+    Found 2-bit adder for signal <loadvalue$addsub0000> created at line 72.
+    Found 3-bit register for signal <partempF>.
+    Found 3-bit register for signal <partempR>.
+    Found 1-bit register for signal <serout>.
+    Summary:
+	inferred   9 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <par2ser> synthesized.
+
+
+Synthesizing Unit <dppmdemod>.
+    Related source file is "E:/IIT/modem/source/dppmdemod.vhd".
+    Found 1-bit register for signal <dppmdemodflag>.
+    Found 3-bit register for signal <pardppmdemodout>.
+    Found 3-bit up counter for signal <mdppmdataintvalue>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   4 D-type flip-flop(s).
+Unit <dppmdemod> synthesized.
+
+
+Synthesizing Unit <dpimdemod>.
+    Related source file is "E:/IIT/modem/source/dpimdemod.vhd".
+    Found 1-bit register for signal <dpimdemodflag>.
+    Found 3-bit register for signal <pardpimdemodout>.
+    Found 3-bit up counter for signal <mdpimdataintvalue>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   4 D-type flip-flop(s).
+Unit <dpimdemod> synthesized.
+
+
+Synthesizing Unit <topmod>.
+    Related source file is "E:/IIT/modem/source/topmod.vhd".
+Unit <topmod> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 2
+ 7x7-bit ROM                                           : 2
+# Multipliers                                          : 2
+ 6x3-bit multiplier                                    : 1
+ 7x3-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 20
+ 2-bit adder                                           : 3
+ 3-bit adder                                           : 9
+ 3-bit subtractor                                      : 2
+ 4-bit adder                                           : 1
+ 4-bit subtractor                                      : 2
+ 5-bit adder                                           : 3
+# Counters                                             : 28
+ 2-bit up counter                                      : 4
+ 3-bit up counter                                      : 16
+ 6-bit up counter                                      : 2
+ 7-bit up counter                                      : 3
+ 9-bit up counter                                      : 3
+# Accumulators                                         : 2
+ 3-bit up accumulator                                  : 2
+# Registers                                            : 109
+ 1-bit register                                        : 39
+ 2-bit register                                        : 3
+ 3-bit register                                        : 62
+ 4-bit register                                        : 1
+ 5-bit register                                        : 3
+ 7-bit register                                        : 1
+# Latches                                              : 1
+ 3-bit latch                                           : 1
+# Comparators                                          : 37
+ 10-bit comparator equal                               : 2
+ 10-bit comparator not equal                           : 1
+ 3-bit comparator equal                                : 9
+ 3-bit comparator greater                              : 1
+ 3-bit comparator not equal                            : 5
+ 6-bit comparator equal                                : 2
+ 6-bit comparator greater                              : 1
+ 6-bit comparator not equal                            : 1
+ 7-bit comparator equal                                : 7
+ 7-bit comparator not equal                            : 5
+ 9-bit comparator equal                                : 1
+ 9-bit comparator greatequal                           : 1
+ 9-bit comparator not equal                            : 1
+# Multiplexers                                         : 4
+ 3-bit 8-to-1 multiplexer                              : 4
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Loading device for application Rf_Device from file '2vp30.nph' in environment C:\Xilinx\10.1\ISE.
+
+Synthesizing (advanced) Unit <clockrecovery>.
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_par2serppmtempclkop_mult0001 by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_par2serppmtempclkop_mult0000 by adding 1 register level(s).
+Unit <clockrecovery> synthesized (advanced).
+WARNING:Xst:1293 - FF/Latch <partempR_1> has a constant value of 0 in block <par2ser>. This FF/Latch will be trimmed during the optimization process.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 2
+ 7x7-bit ROM                                           : 2
+# Multipliers                                          : 2
+ 6x3-bit multiplier                                    : 1
+ 7x3-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 20
+ 2-bit adder                                           : 3
+ 3-bit adder                                           : 9
+ 3-bit subtractor                                      : 2
+ 4-bit adder                                           : 1
+ 4-bit subtractor                                      : 2
+ 5-bit adder                                           : 3
+# Counters                                             : 28
+ 2-bit up counter                                      : 4
+ 3-bit up counter                                      : 16
+ 6-bit up counter                                      : 2
+ 7-bit up counter                                      : 3
+ 9-bit up counter                                      : 3
+# Accumulators                                         : 2
+ 3-bit up accumulator                                  : 2
+# Registers                                            : 254
+ Flip-Flops                                            : 254
+# Latches                                              : 1
+ 3-bit latch                                           : 1
+# Comparators                                          : 37
+ 10-bit comparator equal                               : 2
+ 10-bit comparator not equal                           : 1
+ 3-bit comparator equal                                : 9
+ 3-bit comparator greater                              : 1
+ 3-bit comparator not equal                            : 5
+ 6-bit comparator equal                                : 2
+ 6-bit comparator greater                              : 1
+ 6-bit comparator not equal                            : 1
+ 7-bit comparator equal                                : 7
+ 7-bit comparator not equal                            : 5
+ 9-bit comparator equal                                : 1
+ 9-bit comparator greatequal                           : 1
+ 9-bit comparator not equal                            : 1
+# Multiplexers                                         : 4
+ 3-bit 8-to-1 multiplexer                              : 4
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <ser2parinstmdpim/parallelout_1> in Unit <topmod> is equivalent to the following 2 FFs/Latches, which will be removed : <ser2parinstmdppm/parallelout_1> <ser2parinstmppm/parallelout_1> 
+INFO:Xst:2261 - The FF/Latch <ser2parinstmdpim/parallelout_2> in Unit <topmod> is equivalent to the following 2 FFs/Latches, which will be removed : <ser2parinstmdppm/parallelout_2> <ser2parinstmppm/parallelout_2> 
+INFO:Xst:2261 - The FF/Latch <ser2parinstmdpim/parallelout_3> in Unit <topmod> is equivalent to the following 2 FFs/Latches, which will be removed : <ser2parinstmdppm/parallelout_3> <ser2parinstmppm/parallelout_3> 
+INFO:Xst:2146 - In block <clockrecovery>, ROM <Mrom__mux0001> <Mrom__mux0003> are equivalent, XST will keep only <Mrom__mux0001>.
+WARNING:Xst:1293 - FF/Latch <dpimNclk_0> has a constant value of 0 in block <clockrecovery>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <dppmNclk_0> has a constant value of 0 in block <clockrecovery>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <topmod> ...
+
+Optimizing unit <buffmodule> ...
+
+Optimizing unit <clockmodule> ...
+
+Optimizing unit <clockrecovery> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block topmod, actual ratio is 2.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 368
+ Flip-Flops                                            : 368
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : topmod.ngr
+Top Level Output File Name         : topmod
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 10
+
+Cell Usage :
+# BELS                             : 612
+#      GND                         : 1
+#      INV                         : 36
+#      LUT1                        : 10
+#      LUT2                        : 71
+#      LUT3                        : 184
+#      LUT4                        : 130
+#      LUT4_D                      : 4
+#      LUT4_L                      : 7
+#      MUXCY                       : 66
+#      MUXF5                       : 42
+#      MUXF6                       : 12
+#      VCC                         : 1
+#      XORCY                       : 48
+# FlipFlops/Latches                : 371
+#      FD                          : 3
+#      FD_1                        : 15
+#      FDC                         : 43
+#      FDCE                        : 99
+#      FDCE_1                      : 119
+#      FDE                         : 51
+#      FDE_1                       : 9
+#      FDP                         : 6
+#      FDPE                        : 7
+#      FDR                         : 3
+#      FDRE                        : 9
+#      FDS                         : 4
+#      LDE                         : 3
+# Clock Buffers                    : 7
+#      BUFG                        : 6
+#      BUFGP                       : 1
+# IO Buffers                       : 9
+#      IBUF                        : 1
+#      OBUF                        : 8
+# MULTs                            : 2
+#      MULT18X18                   : 2
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 2vp30ff896-7 
+
+ Number of Slices:                      292  out of  13696     2%  
+ Number of Slice Flip Flops:            370  out of  27392     1%  
+ Number of 4 input LUTs:                442  out of  27392     1%  
+ Number of IOs:                          10
+ Number of bonded IOBs:                  10  out of    556     1%  
+    IOB Flip Flops:                       1
+ Number of MULT18X18s:                    2  out of    136     1%  
+ Number of GCLKs:                         7  out of     16    43%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-------------------------------------------------------------------------------------+--------------------------------------------+-------+
+Clock Signal                                                                         | Clock buffer(FF name)                      | Load  |
+-------------------------------------------------------------------------------------+--------------------------------------------+-------+
+clockmoduleinst/cmodser2parmdpimclock1                                               | BUFG                                       | 30    |
+clockmoduleinst/cmodsysNclock1                                                       | BUFG                                       | 24    |
+clockmoduleinst/cmodser2parmdppmclock1                                               | BUFG                                       | 30    |
+clockmoduleinst/cmodser2parmppmclock                                                 | NONE(ser2parinstmppm/ser2parout_3)         | 3     |
+icmppm(clockmoduleinst/cmodmppmclock_and0000:O)                                      | NONE(*)(mppminst/mppmtempoutR)             | 4     |
+clockmoduleinst/cmodmdppmclock                                                       | NONE(mdppminst/mdppmtempoutR)              | 4     |
+clockmoduleinst/cmodmdpimclock                                                       | NONE(mdpiminst/mdpimtempoutR)              | 5     |
+clockrecoveryinst/ookclockout                                                        | NONE(ookdemodinst/ookdemodout)             | 1     |
+clockrecoveryinst/par2serdpimclockout1                                               | BUFG                                       | 24    |
+ppmout_OBUF(mppminst/mppmout1:O)                                                     | NONE(*)(ppmdemodinst/parppmdemodtempout_3) | 4     |
+clockrecoveryinst/desysclockout                                                      | NONE(par2serinstdpim/serout)               | 15    |
+clockrecoveryinst/dppmclockout                                                       | NONE(dppmdemodinst/pardppmdemodout_3)      | 7     |
+clockrecoveryinst/dpimclockout                                                       | NONE(dpimdemodinst/pardpimdemodout_3)      | 7     |
+demodppmtempclk_inv(demodppmtempclk_inv_f5:O)                                        | NONE(*)(ppmdemodinst/mppmdataintvalue_0)   | 3     |
+dpimdemodinst/dpimdemodflag1                                                         | BUFG                                       | 27    |
+dppmdemodinst/dppmdemodflag1                                                         | BUFG                                       | 27    |
+buffmoduleinstmdpim/readtrigger_inv(buffmoduleinstmdpim/readtrigger_inv1:O)          | NONE(*)(buffmoduleinstmdpim/addressR_2)    | 3     |
+mdpimtrigtempout(mdpiminst/mdpimtrig1:O)                                             | NONE(*)(buffmoduleinstmdpim/dataread_3)    | 3     |
+buffmoduleinstmdppm/readtrigger_inv(buffmoduleinstmdppm/readtrigger_inv1:O)          | NONE(*)(buffmoduleinstmdppm/addressR_2)    | 3     |
+dppmdemodinst/pardppmdemodout_not0001(dppmdemodinst/pardppmdemodout_not00011:O)      | NONE(*)(buffmoduleinstmdppm/dataread_3)    | 4     |
+clock                                                                                | BUFGP                                      | 122   |
+prbsinst/prbsout                                                                     | NONE(clockrecoveryinst/sampledatacount_8)  | 17    |
+clockrecoveryinst/ppmsynccounter_and0001(clockrecoveryinst/ppmsynccounter_and00011:O)| NONE(*)(clockrecoveryinst/ppmsynccounter_2)| 3     |
+dpimdemodinst/pardpimdemodout_not0001(dpimdemodinst/pardpimdemodout_not00011:O)      | NONE(*)(clockrecoveryinst/firsttriggerdpim)| 1     |
+-------------------------------------------------------------------------------------+--------------------------------------------+-------+
+(*) These 9 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+reset                              | IBUF                   | 274   |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -7
+
+   Minimum period: 16.062ns (Maximum Frequency: 62.261MHz)
+   Minimum input arrival time before clock: 3.254ns
+   Maximum output required time after clock: 5.813ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clockmoduleinst/cmodsysNclock1'
+  Clock period: 2.802ns (frequency: 356.869MHz)
+  Total number of paths / destination ports: 92 / 45
+-------------------------------------------------------------------------
+Delay:               2.802ns (Levels of Logic = 2)
+  Source:            prbsinst/synccounter_0 (FF)
+  Destination:       prbsinst/prbsout (FF)
+  Source Clock:      clockmoduleinst/cmodsysNclock1 rising
+  Destination Clock: clockmoduleinst/cmodsysNclock1 rising
+
+  Data Path: prbsinst/synccounter_0 to prbsinst/prbsout
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             3   0.370   0.533  prbsinst/synccounter_0 (prbsinst/synccounter_0)
+     LUT2:I0->O            2   0.275   0.416  prbsinst/prbsout_and0000_SW0 (N32)
+     LUT4:I3->O            3   0.275   0.397  prbsinst/prbsout_and0000_inv (prbsinst/prbsout_and0000_inv)
+     FDS:S                     0.536          prbsinst/prbsout
+    ----------------------------------------
+    Total                      2.802ns (1.456ns logic, 1.346ns route)
+                                       (52.0% logic, 48.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'icmppm'
+  Clock period: 2.073ns (frequency: 482.416MHz)
+  Total number of paths / destination ports: 18 / 7
+-------------------------------------------------------------------------
+Delay:               2.073ns (Levels of Logic = 1)
+  Source:            mppminst/mppminternalcount_2 (FF)
+  Destination:       mppminst/mppminternalcount_0 (FF)
+  Source Clock:      icmppm rising
+  Destination Clock: icmppm rising
+
+  Data Path: mppminst/mppminternalcount_2 to mppminst/mppminternalcount_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             3   0.370   0.495  mppminst/mppminternalcount_2 (mppminst/mppminternalcount_2)
+     LUT4:I1->O            3   0.275   0.397  mppminst/mppminternalcount_and00001 (mppminst/mppminternalcount_and0000)
+     FDRE:R                    0.536          mppminst/mppminternalcount_0
+    ----------------------------------------
+    Total                      2.073ns (1.181ns logic, 0.892ns route)
+                                       (57.0% logic, 43.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clockmoduleinst/cmodmdppmclock'
+  Clock period: 2.760ns (frequency: 362.279MHz)
+  Total number of paths / destination ports: 18 / 7
+-------------------------------------------------------------------------
+Delay:               2.760ns (Levels of Logic = 2)
+  Source:            mdppminst/mdppminternalcount_0 (FF)
+  Destination:       mdppminst/mdppminternalcount_0 (FF)
+  Source Clock:      clockmoduleinst/cmodmdppmclock rising
+  Destination Clock: clockmoduleinst/cmodmdppmclock rising
+
+  Data Path: mdppminst/mdppminternalcount_0 to mdppminst/mdppminternalcount_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             4   0.370   0.511  mdppminst/mdppminternalcount_0 (mdppminst/mdppminternalcount_0)
+     LUT4:I1->O            2   0.275   0.396  mdppminst/mdppmtempoutR_mux0002_SW0 (N40)
+     LUT4:I2->O            3   0.275   0.397  mdppminst/mdppminternalcount_and0000 (mdppminst/mdppminternalcount_and0000)
+     FDRE:R                    0.536          mdppminst/mdppminternalcount_0
+    ----------------------------------------
+    Total                      2.760ns (1.456ns logic, 1.304ns route)
+                                       (52.7% logic, 47.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clockmoduleinst/cmodmdpimclock'
+  Clock period: 2.775ns (frequency: 360.393MHz)
+  Total number of paths / destination ports: 21 / 8
+-------------------------------------------------------------------------
+Delay:               2.775ns (Levels of Logic = 2)
+  Source:            mdpiminst/mdpiminternalcount_0 (FF)
+  Destination:       mdpiminst/mdpiminternalcount_0 (FF)
+  Source Clock:      clockmoduleinst/cmodmdpimclock rising
+  Destination Clock: clockmoduleinst/cmodmdpimclock rising
+
+  Data Path: mdpiminst/mdpiminternalcount_0 to mdpiminst/mdpiminternalcount_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             5   0.370   0.526  mdpiminst/mdpiminternalcount_0 (mdpiminst/mdpiminternalcount_0)
+     LUT4:I1->O            2   0.275   0.396  mdpiminst/mdpimtrigR_mux0002_SW0 (N42)
+     LUT4:I2->O            3   0.275   0.397  mdpiminst/mdpiminternalcount_and0000 (mdpiminst/mdpiminternalcount_and0000)
+     FDRE:R                    0.536          mdpiminst/mdpiminternalcount_0
+    ----------------------------------------
+    Total                      2.775ns (1.456ns logic, 1.319ns route)
+                                       (52.5% logic, 47.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clockrecoveryinst/desysclockout'
+  Clock period: 1.417ns (frequency: 705.941MHz)
+  Total number of paths / destination ports: 36 / 15
+-------------------------------------------------------------------------
+Delay:               1.417ns (Levels of Logic = 1)
+  Source:            par2serinstdpim/loadvalue_0 (FF)
+  Destination:       par2serinstdpim/serout (FF)
+  Source Clock:      clockrecoveryinst/desysclockout rising
+  Destination Clock: clockrecoveryinst/desysclockout rising
+
+  Data Path: par2serinstdpim/loadvalue_0 to par2serinstdpim/serout
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              5   0.370   0.564  par2serinstdpim/loadvalue_0 (par2serinstdpim/loadvalue_0)
+     LUT2:I0->O            1   0.275   0.000  par2serinstdpim/loadvalue_mux0002<1>1 (par2serinstdpim/loadvalue_mux0002<1>)
+     FDE:D                     0.208          par2serinstdpim/loadvalue_0
+    ----------------------------------------
+    Total                      1.417ns (0.853ns logic, 0.564ns route)
+                                       (60.2% logic, 39.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clockrecoveryinst/par2serdpimclockout1'
+  Clock period: 2.203ns (frequency: 453.916MHz)
+  Total number of paths / destination ports: 63 / 21
+-------------------------------------------------------------------------
+Delay:               2.203ns (Levels of Logic = 3)
+  Source:            buffmoduleinstdemoddpim/addressR_0 (FF)
+  Destination:       buffmoduleinstdemoddpim/dataread_3 (FF)
+  Source Clock:      clockrecoveryinst/par2serdpimclockout1 falling
+  Destination Clock: clockrecoveryinst/par2serdpimclockout1 falling
+
+  Data Path: buffmoduleinstdemoddpim/addressR_0 to buffmoduleinstdemoddpim/dataread_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             15   0.370   0.759  buffmoduleinstdemoddpim/addressR_0 (buffmoduleinstdemoddpim/addressR_0)
+     LUT3:I0->O            1   0.275   0.000  buffmoduleinstdemoddpim/Mmux__varindex0000_4 (buffmoduleinstdemoddpim/Mmux__varindex0000_4)
+     MUXF5:I1->O           1   0.303   0.000  buffmoduleinstdemoddpim/Mmux__varindex0000_3_f5 (buffmoduleinstdemoddpim/Mmux__varindex0000_3_f5)
+     MUXF6:I1->O           1   0.288   0.000  buffmoduleinstdemoddpim/Mmux__varindex0000_2_f6 (buffmoduleinstdemoddpim/_varindex0000<1>)
+     FD_1:D                    0.208          buffmoduleinstdemoddpim/dataread_1
+    ----------------------------------------
+    Total                      2.203ns (1.444ns logic, 0.759ns route)
+                                       (65.5% logic, 34.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clockrecoveryinst/dppmclockout'
+  Clock period: 1.689ns (frequency: 592.084MHz)
+  Total number of paths / destination ports: 12 / 6
+-------------------------------------------------------------------------
+Delay:               1.689ns (Levels of Logic = 2)
+  Source:            dppmdemodinst/mdppmdataintvalue_2 (FF)
+  Destination:       dppmdemodinst/mdppmdataintvalue_2 (FF)
+  Source Clock:      clockrecoveryinst/dppmclockout rising
+  Destination Clock: clockrecoveryinst/dppmclockout rising
+
+  Data Path: dppmdemodinst/mdppmdataintvalue_2 to dppmdemodinst/mdppmdataintvalue_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             3   0.370   0.533  dppmdemodinst/mdppmdataintvalue_2 (dppmdemodinst/mdppmdataintvalue_2)
+     LUT4:I0->O            1   0.275   0.000  dppmdemodinst/Mcount_mdppmdataintvalue_xor<2>11 (dppmdemodinst/Mcount_mdppmdataintvalue_xor<2>1)
+     MUXF5:I1->O           1   0.303   0.000  dppmdemodinst/Mcount_mdppmdataintvalue_xor<2>1_f5 (dppmdemodinst/Mcount_mdppmdataintvalue6)
+     FDCE:D                    0.208          dppmdemodinst/mdppmdataintvalue_2
+    ----------------------------------------
+    Total                      1.689ns (1.156ns logic, 0.533ns route)
+                                       (68.4% logic, 31.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clockrecoveryinst/dpimclockout'
+  Clock period: 1.689ns (frequency: 592.084MHz)
+  Total number of paths / destination ports: 12 / 6
+-------------------------------------------------------------------------
+Delay:               1.689ns (Levels of Logic = 2)
+  Source:            dpimdemodinst/mdpimdataintvalue_2 (FF)
+  Destination:       dpimdemodinst/mdpimdataintvalue_2 (FF)
+  Source Clock:      clockrecoveryinst/dpimclockout rising
+  Destination Clock: clockrecoveryinst/dpimclockout rising
+
+  Data Path: dpimdemodinst/mdpimdataintvalue_2 to dpimdemodinst/mdpimdataintvalue_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             3   0.370   0.533  dpimdemodinst/mdpimdataintvalue_2 (dpimdemodinst/mdpimdataintvalue_2)
+     LUT4:I0->O            1   0.275   0.000  dpimdemodinst/Mcount_mdpimdataintvalue_xor<2>11 (dpimdemodinst/Mcount_mdpimdataintvalue_xor<2>1)
+     MUXF5:I1->O           1   0.303   0.000  dpimdemodinst/Mcount_mdpimdataintvalue_xor<2>1_f5 (dpimdemodinst/Mcount_mdpimdataintvalue6)
+     FDCE:D                    0.208          dpimdemodinst/mdpimdataintvalue_2
+    ----------------------------------------
+    Total                      1.689ns (1.156ns logic, 0.533ns route)
+                                       (68.4% logic, 31.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'demodppmtempclk_inv'
+  Clock period: 1.598ns (frequency: 625.939MHz)
+  Total number of paths / destination ports: 6 / 3
+-------------------------------------------------------------------------
+Delay:               1.598ns (Levels of Logic = 1)
+  Source:            ppmdemodinst/mppmdataintvalue_0 (FF)
+  Destination:       ppmdemodinst/mppmdataintvalue_0 (FF)
+  Source Clock:      demodppmtempclk_inv rising
+  Destination Clock: demodppmtempclk_inv rising
+
+  Data Path: ppmdemodinst/mppmdataintvalue_0 to ppmdemodinst/mppmdataintvalue_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              4   0.370   0.413  ppmdemodinst/mppmdataintvalue_0 (ppmdemodinst/mppmdataintvalue_0)
+     INV:I->O              1   0.275   0.331  ppmdemodinst/Mcount_mppmdataintvalue_xor<0>11_INV_0 (ppmdemodinst/Mcount_mppmdataintvalue)
+     FDC:D                     0.208          ppmdemodinst/mppmdataintvalue_0
+    ----------------------------------------
+    Total                      1.598ns (0.853ns logic, 0.745ns route)
+                                       (53.4% logic, 46.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'dpimdemodinst/dpimdemodflag1'
+  Clock period: 1.962ns (frequency: 509.684MHz)
+  Total number of paths / destination ports: 78 / 27
+-------------------------------------------------------------------------
+Delay:               1.962ns (Levels of Logic = 1)
+  Source:            buffmoduleinstdemoddpim/addressW_0 (FF)
+  Destination:       buffmoduleinstdemoddpim/buff_4_3 (FF)
+  Source Clock:      dpimdemodinst/dpimdemodflag1 falling
+  Destination Clock: dpimdemodinst/dpimdemodflag1 falling
+
+  Data Path: buffmoduleinstdemoddpim/addressW_0 to buffmoduleinstdemoddpim/buff_4_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE_1:C->Q          11   0.370   0.657  buffmoduleinstdemoddpim/addressW_0 (buffmoduleinstdemoddpim/addressW_0)
+     LUT3:I0->O            3   0.275   0.397  buffmoduleinstdemoddpim/buff_4_and00001 (buffmoduleinstdemoddpim/buff_4_and0000)
+     FDCE_1:CE                 0.263          buffmoduleinstdemoddpim/buff_4_1
+    ----------------------------------------
+    Total                      1.962ns (0.908ns logic, 1.054ns route)
+                                       (46.3% logic, 53.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'dppmdemodinst/dppmdemodflag1'
+  Clock period: 1.962ns (frequency: 509.684MHz)
+  Total number of paths / destination ports: 78 / 27
+-------------------------------------------------------------------------
+Delay:               1.962ns (Levels of Logic = 1)
+  Source:            buffmoduleinstdemoddppm/addressW_0 (FF)
+  Destination:       buffmoduleinstdemoddppm/buff_7_3 (FF)
+  Source Clock:      dppmdemodinst/dppmdemodflag1 falling
+  Destination Clock: dppmdemodinst/dppmdemodflag1 falling
+
+  Data Path: buffmoduleinstdemoddppm/addressW_0 to buffmoduleinstdemoddppm/buff_7_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE_1:C->Q          11   0.370   0.657  buffmoduleinstdemoddppm/addressW_0 (buffmoduleinstdemoddppm/addressW_0)
+     LUT3:I0->O            3   0.275   0.397  buffmoduleinstdemoddppm/buff_7_and00001 (buffmoduleinstdemoddppm/buff_7_and0000)
+     FDCE_1:CE                 0.263          buffmoduleinstdemoddppm/buff_7_1
+    ----------------------------------------
+    Total                      1.962ns (0.908ns logic, 1.054ns route)
+                                       (46.3% logic, 53.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'buffmoduleinstmdpim/readtrigger_inv'
+  Clock period: 1.808ns (frequency: 553.235MHz)
+  Total number of paths / destination ports: 6 / 3
+-------------------------------------------------------------------------
+Delay:               1.808ns (Levels of Logic = 1)
+  Source:            buffmoduleinstmdpim/addressR_0 (FF)
+  Destination:       buffmoduleinstmdpim/addressR_0 (FF)
+  Source Clock:      buffmoduleinstmdpim/readtrigger_inv rising
+  Destination Clock: buffmoduleinstmdpim/readtrigger_inv rising
+
+  Data Path: buffmoduleinstmdpim/addressR_0 to buffmoduleinstmdpim/addressR_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             15   0.370   0.623  buffmoduleinstmdpim/addressR_0 (buffmoduleinstmdpim/addressR_0)
+     INV:I->O              1   0.275   0.331  buffmoduleinstmdpim/Mcount_addressR_xor<0>11_INV_0 (buffmoduleinstmdpim/Mcount_addressR)
+     FDC:D                     0.208          buffmoduleinstmdpim/addressR_0
+    ----------------------------------------
+    Total                      1.808ns (0.853ns logic, 0.955ns route)
+                                       (47.2% logic, 52.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clockmoduleinst/cmodser2parmdpimclock1'
+  Clock period: 2.111ns (frequency: 473.619MHz)
+  Total number of paths / destination ports: 102 / 51
+-------------------------------------------------------------------------
+Delay:               1.056ns (Levels of Logic = 0)
+  Source:            ser2parinstmdpim/ser2parout_3 (FF)
+  Destination:       buffmoduleinstmdpim/buff_7_3 (FF)
+  Source Clock:      clockmoduleinst/cmodser2parmdpimclock1 rising
+  Destination Clock: clockmoduleinst/cmodser2parmdpimclock1 falling
+
+  Data Path: ser2parinstmdpim/ser2parout_3 to buffmoduleinstmdpim/buff_7_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              8   0.370   0.478  ser2parinstmdpim/ser2parout_3 (ser2parinstmdpim/ser2parout_3)
+     FDCE_1:D                  0.208          buffmoduleinstmdpim/buff_0_3
+    ----------------------------------------
+    Total                      1.056ns (0.578ns logic, 0.478ns route)
+                                       (54.8% logic, 45.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'buffmoduleinstmdppm/readtrigger_inv'
+  Clock period: 1.808ns (frequency: 553.235MHz)
+  Total number of paths / destination ports: 6 / 3
+-------------------------------------------------------------------------
+Delay:               1.808ns (Levels of Logic = 1)
+  Source:            buffmoduleinstmdppm/addressR_0 (FF)
+  Destination:       buffmoduleinstmdppm/addressR_0 (FF)
+  Source Clock:      buffmoduleinstmdppm/readtrigger_inv rising
+  Destination Clock: buffmoduleinstmdppm/readtrigger_inv rising
+
+  Data Path: buffmoduleinstmdppm/addressR_0 to buffmoduleinstmdppm/addressR_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             15   0.370   0.623  buffmoduleinstmdppm/addressR_0 (buffmoduleinstmdppm/addressR_0)
+     INV:I->O              1   0.275   0.331  buffmoduleinstmdppm/Mcount_addressR_xor<0>11_INV_0 (buffmoduleinstmdppm/Mcount_addressR)
+     FDC:D                     0.208          buffmoduleinstmdppm/addressR_0
+    ----------------------------------------
+    Total                      1.808ns (0.853ns logic, 0.955ns route)
+                                       (47.2% logic, 52.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clockmoduleinst/cmodser2parmdppmclock1'
+  Clock period: 2.111ns (frequency: 473.619MHz)
+  Total number of paths / destination ports: 102 / 51
+-------------------------------------------------------------------------
+Delay:               1.056ns (Levels of Logic = 0)
+  Source:            ser2parinstmdppm/ser2parout_3 (FF)
+  Destination:       buffmoduleinstmdppm/buff_7_3 (FF)
+  Source Clock:      clockmoduleinst/cmodser2parmdppmclock1 rising
+  Destination Clock: clockmoduleinst/cmodser2parmdppmclock1 falling
+
+  Data Path: ser2parinstmdppm/ser2parout_3 to buffmoduleinstmdppm/buff_7_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              8   0.370   0.478  ser2parinstmdppm/ser2parout_3 (ser2parinstmdppm/ser2parout_3)
+     FDCE_1:D                  0.208          buffmoduleinstmdppm/buff_0_3
+    ----------------------------------------
+    Total                      1.056ns (0.578ns logic, 0.478ns route)
+                                       (54.8% logic, 45.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock'
+  Clock period: 16.062ns (frequency: 62.261MHz)
+  Total number of paths / destination ports: 59343 / 194
+-------------------------------------------------------------------------
+Delay:               8.031ns (Levels of Logic = 15)
+  Source:            clockrecoveryinst/ppmNclkF_0 (FF)
+  Destination:       clockrecoveryinst/par2serppmclockcounter_8 (FF)
+  Source Clock:      clock falling
+  Destination Clock: clock rising
+
+  Data Path: clockrecoveryinst/ppmNclkF_0 to clockrecoveryinst/par2serppmclockcounter_8
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            19   0.370   0.616  clockrecoveryinst/ppmNclkF_0 (clockrecoveryinst/ppmNclkF_0)
+     LUT4_D:I2->O          5   0.275   0.446  clockrecoveryinst/Madd_ppmNclk_xor<2>11_SW0 (N99)
+     LUT4:I2->O            7   0.275   0.465  clockrecoveryinst/Mrom__mux00012 (clockrecoveryinst/Mrom__mux0001)
+     MULT18X18:A0->P8      1   1.733   0.430  clockrecoveryinst/Mmult_par2serppmtempclkop_mult0001 (clockrecoveryinst/par2serppmtempclkop_mult0001<8>)
+     LUT3:I1->O            1   0.275   0.000  clockrecoveryinst/Mcompar_par2serppmtempclkop_cmp_eq0001_lut<4> (clockrecoveryinst/Mcompar_par2serppmtempclkop_cmp_eq0001_lut<4>)
+     MUXCY:S->O           12   0.713   0.619  clockrecoveryinst/Mcompar_par2serppmtempclkop_cmp_eq0001_cy<4> (clockrecoveryinst/Mcompar_par2serppmtempclkop_cmp_eq0001_cy<4>)
+     LUT2:I1->O            1   0.275   0.331  clockrecoveryinst/par2serppmclockcounter_and0000_inv1 (clockrecoveryinst/par2serppmclockcounter_and0000_inv)
+     MUXCY:CI->O           1   0.036   0.000  clockrecoveryinst/Mcount_par2serppmclockcounter_cy<0> (clockrecoveryinst/Mcount_par2serppmclockcounter_cy<0>)
+     MUXCY:CI->O           1   0.036   0.000  clockrecoveryinst/Mcount_par2serppmclockcounter_cy<1> (clockrecoveryinst/Mcount_par2serppmclockcounter_cy<1>)
+     MUXCY:CI->O           1   0.036   0.000  clockrecoveryinst/Mcount_par2serppmclockcounter_cy<2> (clockrecoveryinst/Mcount_par2serppmclockcounter_cy<2>)
+     MUXCY:CI->O           1   0.036   0.000  clockrecoveryinst/Mcount_par2serppmclockcounter_cy<3> (clockrecoveryinst/Mcount_par2serppmclockcounter_cy<3>)
+     MUXCY:CI->O           1   0.036   0.000  clockrecoveryinst/Mcount_par2serppmclockcounter_cy<4> (clockrecoveryinst/Mcount_par2serppmclockcounter_cy<4>)
+     MUXCY:CI->O           1   0.036   0.000  clockrecoveryinst/Mcount_par2serppmclockcounter_cy<5> (clockrecoveryinst/Mcount_par2serppmclockcounter_cy<5>)
+     MUXCY:CI->O           1   0.036   0.000  clockrecoveryinst/Mcount_par2serppmclockcounter_cy<6> (clockrecoveryinst/Mcount_par2serppmclockcounter_cy<6>)
+     MUXCY:CI->O           0   0.036   0.000  clockrecoveryinst/Mcount_par2serppmclockcounter_cy<7> (clockrecoveryinst/Mcount_par2serppmclockcounter_cy<7>)
+     XORCY:CI->O           1   0.708   0.000  clockrecoveryinst/Mcount_par2serppmclockcounter_xor<8> (clockrecoveryinst/Mcount_par2serppmclockcounter8)
+     FDCE:D                    0.208          clockrecoveryinst/par2serppmclockcounter_8
+    ----------------------------------------
+    Total                      8.031ns (5.124ns logic, 2.907ns route)
+                                       (63.8% logic, 36.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'prbsinst/prbsout'
+  Clock period: 3.579ns (frequency: 279.415MHz)
+  Total number of paths / destination ports: 366 / 26
+-------------------------------------------------------------------------
+Delay:               3.579ns (Levels of Logic = 10)
+  Source:            clockrecoveryinst/ookNclkleast_0 (FF)
+  Destination:       clockrecoveryinst/ookNclkleast_6 (FF)
+  Source Clock:      prbsinst/prbsout falling
+  Destination Clock: prbsinst/prbsout falling
+
+  Data Path: clockrecoveryinst/ookNclkleast_0 to clockrecoveryinst/ookNclkleast_6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE_1:C->Q           3   0.370   0.495  clockrecoveryinst/ookNclkleast_0 (clockrecoveryinst/ookNclkleast_0)
+     LUT2:I1->O            1   0.275   0.000  clockrecoveryinst/Mcompar_ookNclkleast_cmp_ge0000_lut<0> (clockrecoveryinst/Mcompar_ookNclkleast_cmp_ge0000_lut<0>)
+     MUXCY:S->O            1   0.334   0.000  clockrecoveryinst/Mcompar_ookNclkleast_cmp_ge0000_cy<0> (clockrecoveryinst/Mcompar_ookNclkleast_cmp_ge0000_cy<0>)
+     MUXCY:CI->O           1   0.036   0.000  clockrecoveryinst/Mcompar_ookNclkleast_cmp_ge0000_cy<1> (clockrecoveryinst/Mcompar_ookNclkleast_cmp_ge0000_cy<1>)
+     MUXCY:CI->O           1   0.036   0.000  clockrecoveryinst/Mcompar_ookNclkleast_cmp_ge0000_cy<2> (clockrecoveryinst/Mcompar_ookNclkleast_cmp_ge0000_cy<2>)
+     MUXCY:CI->O           1   0.037   0.000  clockrecoveryinst/Mcompar_ookNclkleast_cmp_ge0000_cy<3> (clockrecoveryinst/Mcompar_ookNclkleast_cmp_ge0000_cy<3>)
+     MUXCY:CI->O           1   0.036   0.000  clockrecoveryinst/Mcompar_ookNclkleast_cmp_ge0000_cy<4> (clockrecoveryinst/Mcompar_ookNclkleast_cmp_ge0000_cy<4>)
+     MUXCY:CI->O           1   0.036   0.000  clockrecoveryinst/Mcompar_ookNclkleast_cmp_ge0000_cy<5> (clockrecoveryinst/Mcompar_ookNclkleast_cmp_ge0000_cy<5>)
+     MUXCY:CI->O           1   0.036   0.000  clockrecoveryinst/Mcompar_ookNclkleast_cmp_ge0000_cy<6> (clockrecoveryinst/Mcompar_ookNclkleast_cmp_ge0000_cy<6>)
+     MUXCY:CI->O           1   0.416   0.467  clockrecoveryinst/Mcompar_ookNclkleast_cmp_ge0000_cy<7> (clockrecoveryinst/ookNclkleast_cmp_ge0000)
+     LUT4:I0->O            7   0.275   0.465  clockrecoveryinst/ookNclkleast_not00011 (clockrecoveryinst/ookNclkleast_not0001)
+     FDCE_1:CE                 0.263          clockrecoveryinst/ookNclkleast_0
+    ----------------------------------------
+    Total                      3.579ns (2.152ns logic, 1.427ns route)
+                                       (60.1% logic, 39.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clockrecoveryinst/ppmsynccounter_and0001'
+  Clock period: 2.993ns (frequency: 334.096MHz)
+  Total number of paths / destination ports: 14 / 3
+-------------------------------------------------------------------------
+Delay:               2.993ns (Levels of Logic = 3)
+  Source:            clockrecoveryinst/ppmsynccounter_1 (LATCH)
+  Destination:       clockrecoveryinst/ppmsynccounter_1 (LATCH)
+  Source Clock:      clockrecoveryinst/ppmsynccounter_and0001 falling
+  Destination Clock: clockrecoveryinst/ppmsynccounter_and0001 falling
+
+  Data Path: clockrecoveryinst/ppmsynccounter_1 to clockrecoveryinst/ppmsynccounter_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              3   0.536   0.495  clockrecoveryinst/ppmsynccounter_1 (clockrecoveryinst/ppmsynccounter_1)
+     LUT4:I1->O            2   0.275   0.396  clockrecoveryinst/ppmclockout_cmp_eq0000369 (clockrecoveryinst/ppmclockout_cmp_eq0000369)
+     LUT4:I2->O            3   0.275   0.533  clockrecoveryinst/ppmclockout_cmp_eq0000386 (clockrecoveryinst/ppmclockout_cmp_eq0000)
+     LUT3:I0->O            1   0.275   0.000  clockrecoveryinst/ppmsynccounter_mux0002<1>1 (clockrecoveryinst/ppmsynccounter_mux0002<1>)
+     LDE:D                     0.208          clockrecoveryinst/ppmsynccounter_1
+    ----------------------------------------
+    Total                      2.993ns (1.569ns logic, 1.424ns route)
+                                       (52.4% logic, 47.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'icmppm'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              3.254ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       mppminst/mppminternalcount_0 (FF)
+  Destination Clock: icmppm rising
+
+  Data Path: reset to mppminst/mppminternalcount_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           286   0.878   1.168  reset_IBUF (reset_IBUF)
+     LUT4:I0->O            3   0.275   0.397  mppminst/mppminternalcount_and00001 (mppminst/mppminternalcount_and0000)
+     FDRE:R                    0.536          mppminst/mppminternalcount_0
+    ----------------------------------------
+    Total                      3.254ns (1.689ns logic, 1.565ns route)
+                                       (51.9% logic, 48.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clockmoduleinst/cmodmdppmclock'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              3.156ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       mdppminst/mdppminternalcount_0 (FF)
+  Destination Clock: clockmoduleinst/cmodmdppmclock rising
+
+  Data Path: reset to mdppminst/mdppminternalcount_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           286   0.878   1.070  reset_IBUF (reset_IBUF)
+     LUT4:I3->O            3   0.275   0.397  mdppminst/mdppminternalcount_and0000 (mdppminst/mdppminternalcount_and0000)
+     FDRE:R                    0.536          mdppminst/mdppminternalcount_0
+    ----------------------------------------
+    Total                      3.156ns (1.689ns logic, 1.467ns route)
+                                       (53.5% logic, 46.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clockmoduleinst/cmodmdpimclock'
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Offset:              3.156ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       mdpiminst/mdpiminternalcount_0 (FF)
+  Destination Clock: clockmoduleinst/cmodmdpimclock rising
+
+  Data Path: reset to mdpiminst/mdpiminternalcount_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           286   0.878   1.070  reset_IBUF (reset_IBUF)
+     LUT4:I3->O            3   0.275   0.397  mdpiminst/mdpiminternalcount_and0000 (mdpiminst/mdpiminternalcount_and0000)
+     FDRE:R                    0.536          mdpiminst/mdpiminternalcount_0
+    ----------------------------------------
+    Total                      3.156ns (1.689ns logic, 1.467ns route)
+                                       (53.5% logic, 46.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clock'
+  Total number of paths / destination ports: 12 / 12
+-------------------------------------------------------------------------
+Offset:              2.924ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       clockrecoveryinst/triggerook (FF)
+  Destination Clock: clock rising
+
+  Data Path: reset to clockrecoveryinst/triggerook
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           286   0.878   1.130  reset_IBUF (reset_IBUF)
+     LUT3:I1->O            2   0.275   0.378  clockrecoveryinst/desysclockout_and00001 (clockrecoveryinst/desysclockout_and0000)
+     FDE:CE                    0.263          clockrecoveryinst/desysclockout
+    ----------------------------------------
+    Total                      2.924ns (1.416ns logic, 1.508ns route)
+                                       (48.4% logic, 51.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock'
+  Total number of paths / destination ports: 8 / 3
+-------------------------------------------------------------------------
+Offset:              5.813ns (Levels of Logic = 4)
+  Source:            clockmoduleinst/mppmtempclkopF_2 (FF)
+  Destination:       ppmout (PAD)
+  Source Clock:      clock falling
+
+  Data Path: clockmoduleinst/mppmtempclkopF_2 to ppmout
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              4   0.370   0.549  clockmoduleinst/mppmtempclkopF_2 (clockmoduleinst/mppmtempclkopF_2)
+     LUT3:I0->O            1   0.275   0.468  clockmoduleinst/cmodmppmclock_and0000_SW0 (N87)
+     LUT4:I0->O            6   0.275   0.581  clockmoduleinst/cmodmppmclock_and0000 (icmppm)
+     LUT2:I0->O            5   0.275   0.428  mppminst/mppmout1 (ppmout_OBUF)
+     OBUF:I->O                 2.592          ppmout_OBUF (ppmout)
+    ----------------------------------------
+    Total                      5.813ns (3.787ns logic, 2.026ns route)
+                                       (65.2% logic, 34.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'icmppm'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.141ns (Levels of Logic = 2)
+  Source:            mppminst/mppmtempoutR (FF)
+  Destination:       ppmout (PAD)
+  Source Clock:      icmppm rising
+
+  Data Path: mppminst/mppmtempoutR to ppmout
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.370   0.476  mppminst/mppmtempoutR (mppminst/mppmtempoutR)
+     LUT2:I1->O            5   0.275   0.428  mppminst/mppmout1 (ppmout_OBUF)
+     OBUF:I->O                 2.592          ppmout_OBUF (ppmout)
+    ----------------------------------------
+    Total                      4.141ns (3.237ns logic, 0.904ns route)
+                                       (78.2% logic, 21.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clockrecoveryinst/ookclockout'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.293ns (Levels of Logic = 1)
+  Source:            ookdemodinst/ookdemodout (FF)
+  Destination:       demodookout (PAD)
+  Source Clock:      clockrecoveryinst/ookclockout rising
+
+  Data Path: ookdemodinst/ookdemodout to demodookout
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             1   0.370   0.332  ookdemodinst/ookdemodout (ookdemodinst/ookdemodout)
+     OBUF:I->O                 2.592          demodookout_OBUF (demodookout)
+    ----------------------------------------
+    Total                      3.293ns (2.962ns logic, 0.332ns route)
+                                       (89.9% logic, 10.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clockmoduleinst/cmodmdppmclock'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.279ns (Levels of Logic = 2)
+  Source:            mdppminst/mdppmtempoutR (FF)
+  Destination:       dppmout (PAD)
+  Source Clock:      clockmoduleinst/cmodmdppmclock rising
+
+  Data Path: mdppminst/mdppmtempoutR to dppmout
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              6   0.370   0.543  mdppminst/mdppmtempoutR (mdppminst/mdppmtempoutR)
+     LUT2:I1->O            9   0.275   0.499  dppmdemodinst/pardppmdemodout_not00011 (dppmdemodinst/pardppmdemodout_not0001)
+     OBUF:I->O                 2.592          dppmout_OBUF (dppmout)
+    ----------------------------------------
+    Total                      4.279ns (3.237ns logic, 1.042ns route)
+                                       (75.6% logic, 24.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clockmoduleinst/cmodsysNclock1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.582ns (Levels of Logic = 1)
+  Source:            prbsinst/prbsout (FF)
+  Destination:       ookout (PAD)
+  Source Clock:      clockmoduleinst/cmodsysNclock1 rising
+
+  Data Path: prbsinst/prbsout to ookout
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q             22   0.370   0.621  prbsinst/prbsout (prbsinst/prbsout)
+     OBUF:I->O                 2.592          ookout_OBUF (ookout)
+    ----------------------------------------
+    Total                      3.582ns (2.962ns logic, 0.621ns route)
+                                       (82.7% logic, 17.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clockrecoveryinst/desysclockout'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              3.293ns (Levels of Logic = 1)
+  Source:            par2serinstdppm/serout (FF)
+  Destination:       demoddppmout (PAD)
+  Source Clock:      clockrecoveryinst/desysclockout rising
+
+  Data Path: par2serinstdppm/serout to demoddppmout
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.370   0.332  par2serinstdppm/serout (par2serinstdppm/serout)
+     OBUF:I->O                 2.592          demoddppmout_OBUF (demoddppmout)
+    ----------------------------------------
+    Total                      3.293ns (2.962ns logic, 0.332ns route)
+                                       (89.9% logic, 10.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clockmoduleinst/cmodmdpimclock'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.208ns (Levels of Logic = 2)
+  Source:            mdpiminst/mdpimtempoutR (FF)
+  Destination:       dpimout (PAD)
+  Source Clock:      clockmoduleinst/cmodmdpimclock rising
+
+  Data Path: mdpiminst/mdpimtempoutR to dpimout
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              5   0.370   0.526  mdpiminst/mdpimtempoutR (mdpiminst/mdpimtempoutR)
+     LUT2:I1->O            6   0.275   0.445  dpimdemodinst/pardpimdemodout_not00011 (dpimdemodinst/pardpimdemodout_not0001)
+     OBUF:I->O                 2.592          dpimout_OBUF (dpimout)
+    ----------------------------------------
+    Total                      4.208ns (3.237ns logic, 0.971ns route)
+                                       (76.9% logic, 23.1% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 17.00 secs
+Total CPU time to Xst completion: 17.20 secs
+ 
+--> 
+
+Total memory usage is 275712 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    9 (   0 filtered)
+Number of infos    :   13 (   0 filtered)
+
